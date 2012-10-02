@@ -288,7 +288,7 @@ sub acceptHTTP {
 
 		} else {
 
-			$log->warn("Did not accept HTTP connection from $peer, unauthorized source");
+			$log->error("Did not accept HTTP connection from $peer, unauthorized source");
 
 			$httpClient->close();
 			undef($httpClient);
